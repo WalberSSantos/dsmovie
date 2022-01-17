@@ -11,6 +11,7 @@ import { BASE_URL } from 'utils/requests';
     function FormCard({ movieId } : Props) {
 
         const [movie, setMovie] = useState<Movie>();
+        
         useEffect(() => {
             axios.get(`${BASE_URL}/movies/${movieId}`)
             .then(response =>{
